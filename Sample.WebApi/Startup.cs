@@ -40,12 +40,12 @@ namespace Sample.WebApi
         {
 
 
-            //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             //Load All Handler
             //services.AddMediatR(typeof(CreateXxxHandler).Assembly);
-            //var assembly = AppDomain.CurrentDomain.Load("Sample.Application");
-            //services.AddMediatR(assembly);
+            var assembly = AppDomain.CurrentDomain.Load("Sample.Application");
+            services.AddMediatR(assembly);
 
             services.AddControllers();
 
