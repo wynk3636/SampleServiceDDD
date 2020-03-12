@@ -58,6 +58,7 @@ namespace Sample.WebApi
             //DI
             //services.AddTransient();
             services.AddTransient<IxxxProvider,xxxProvider>();
+            services.AddTransient<IClientProvider, ClientProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

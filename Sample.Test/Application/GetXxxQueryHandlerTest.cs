@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 
 namespace Sample.Test.Application
 {
-    public class GetXxxHandlerTest
+    public class GetXxxQueryHandlerTest
     {
         Mock<IMapper> mapperMock = new Mock<IMapper>();
         Mock<IxxxProvider> xxxProvider = new Mock<IxxxProvider>();
 
-        public GetXxxHandlerTest()
+        public GetXxxQueryHandlerTest()
         {
         }
 
@@ -33,7 +33,7 @@ namespace Sample.Test.Application
             xxxProvider.Setup(x => x.GetXxxEntity(It.IsAny<GetXxxQuery>()))
                 .ReturnsAsync(new xxxEntity { age=18 });
 
-            GetXxxHandler handler = new GetXxxHandler(mapperMock.Object, xxxProvider.Object);
+            GetXxxQueryHandler handler = new GetXxxQueryHandler(mapperMock.Object, xxxProvider.Object);
             xxxDto dto = await handler.Handle(new GetXxxQuery(), new CancellationToken());
 
             Assert.Equal("Adult", dto.status);
@@ -46,7 +46,7 @@ namespace Sample.Test.Application
             xxxProvider.Setup(x => x.GetXxxEntity(It.IsAny<GetXxxQuery>()))
                 .ReturnsAsync(new xxxEntity { age = _age });
 
-            GetXxxHandler handler = new GetXxxHandler(mapperMock.Object, xxxProvider.Object);
+            GetXxxQueryHandler handler = new GetXxxQueryHandler(mapperMock.Object, xxxProvider.Object);
             xxxDto dto = await handler.Handle(new GetXxxQuery(), new CancellationToken());
 
             Assert.Equal(expectedStatus, dto.status);

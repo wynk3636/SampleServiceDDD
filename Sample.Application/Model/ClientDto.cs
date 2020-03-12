@@ -1,8 +1,11 @@
 ﻿using System;
-namespace Sample.Domain.Entity
+namespace Sample.Application.Model
 {
-    public class xxxEntity
+    public class ClientDto
     {
+        public ClientDto()
+        {
+        }
 
         public string id { get; set; }
         public string name { get; set; }

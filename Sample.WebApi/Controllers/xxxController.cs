@@ -8,6 +8,7 @@ using Sample.Domain;
 using System.Net;
 using Sample.Application.Model;
 using Sample.Application.Query;
+using Sample.Application.Command;
 
 namespace Sample.WebApi.Controllers
 {
@@ -21,11 +22,19 @@ namespace Sample.WebApi.Controllers
             _logger = logger;
         }
 
-        [HttpPost("GetXxx", Name = "JSON")]
+        //query : read
+        [HttpPost("GetXxx")]
         [ProducesResponseType(typeof(xxxDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetXxx([FromBody]GetXxxQuery query)
         {
             return Ok(await Mediator.Send(query));
+        }
+
+        //command : create, update, delete
+        [HttpPost("CreateXxx")]
+        public async Task<IActionResult> CreateXxx([FromBody]CreateXxxCommand command)
+        {
+            return Ok(await Mediator.Send(command));
         }
     }
 }

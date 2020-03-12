@@ -10,13 +10,13 @@ using Sample.Domain.Entity;
 namespace Sample.Application.Query
 {
 
-    public class GetXxxHandler : IRequestHandler<GetXxxQuery,xxxDto>
+    public class GetXxxQueryHandler : IRequestHandler<GetXxxQuery,xxxDto>
     {
 
         private readonly IMapper _mapper;
         private readonly IxxxProvider _provider;
 
-        public GetXxxHandler(IMapper mapper, IxxxProvider provider)
+        public GetXxxQueryHandler(IMapper mapper, IxxxProvider provider)
         {
             _mapper = mapper;
             _provider = provider;

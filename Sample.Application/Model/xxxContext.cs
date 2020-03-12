@@ -1,11 +1,9 @@
 ﻿using System;
-namespace Sample.Domain.Entity
+namespace Sample.Application.Model
 {
-    public class xxxEntity
+    public class xxxContext
     {
-
         public string id { get; set; }
         public string name { get; set; }
-        public int age { get; set; }
     }
 }
