@@ -12,4 +12,8 @@
     <Folder Include="Query\" />
     <Folder Include="Command\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Common\Sample.Common.csproj" />
+    <ProjectReference Include="..\Sample.Domain\Sample.Domain.csproj" />
+  </ItemGroup>
 </Project>

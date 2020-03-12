@@ -9,4 +9,8 @@
     <Folder Include="Provider\SQLServer\" />
     <Folder Include="Provider\OtherService\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Application\Sample.Application.csproj" />
+    <ProjectReference Include="..\Sample.Domain\Sample.Domain.csproj" />
+  </ItemGroup>
 </Project>

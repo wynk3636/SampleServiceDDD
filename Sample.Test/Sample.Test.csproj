@@ -14,4 +14,11 @@
     <PackageReference Include="Moq" Version="4.13.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.WebApi\Sample.Application\Sample.Application.csproj" />
+    <ProjectReference Include="..\Sample.WebApi\Sample.Common\Sample.Common.csproj" />
+    <ProjectReference Include="..\Sample.WebApi\Sample.Domain\Sample.Domain.csproj" />
+    <ProjectReference Include="..\Sample.WebApi\Sample.Infrastructure\Sample.Infrastructure.csproj" />
+    <ProjectReference Include="..\Sample.WebApi\Sample.WebApi.csproj" />
+  </ItemGroup>
 </Project>
