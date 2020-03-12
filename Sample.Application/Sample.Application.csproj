@@ -11,9 +11,14 @@
     <Folder Include="Repository\" />
     <Folder Include="Query\" />
     <Folder Include="Command\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sample.Common\Sample.Common.csproj" />
     <ProjectReference Include="..\Sample.Domain\Sample.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
   </ItemGroup>
 </Project>

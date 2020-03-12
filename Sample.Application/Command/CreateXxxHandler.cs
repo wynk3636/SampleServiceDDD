@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Sample.Application.Query
+namespace Sample.Application.Command
 {
     public class CreateXxxHandler
     {

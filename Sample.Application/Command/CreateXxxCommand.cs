@@ -1,9 +1,9 @@
 ﻿using System;
 namespace Sample.Application.Command
 {
-    public class GetXxxHandler
+    public class CreateXxxCommand
     {
-        public GetXxxHandler()
+        public CreateXxxCommand()
         {
         }
     }

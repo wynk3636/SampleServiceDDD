@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Sample.Domain;
+using System.Net;
+using Sample.Application.Model;
+using Sample.Application.Query;
 
 namespace Sample.WebApi.Controllers
 {
@@ -22,7 +25,7 @@ namespace Sample.WebApi.Controllers
             _logger = logger;
         }
 
-        [HttpGet("GetXxx")]
+        [HttpGet("GetRequestTest")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
@@ -35,17 +38,11 @@ namespace Sample.WebApi.Controllers
             .ToArray();
         }
 
-        [HttpPost("CreateXxx")]
-        public IEnumerable<WeatherForecast> Post()
+        [HttpPost("GetXxx", Name = "JSON")]
+        [ProducesResponseType(typeof(xxxDto), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetXxx([FromBody]GetXxxQuery query)
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return Ok(await Mediator.Send(query));
         }
     }
 }

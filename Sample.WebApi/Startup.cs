@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +13,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Sample.Application.Command;
+using Sample.Application.Repository;
+using Sample.Infrastructure.Provider;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Sample.WebApi
@@ -34,6 +38,15 @@ namespace Sample.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+            //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            //Load All Handler
+            //services.AddMediatR(typeof(CreateXxxHandler).Assembly);
+            //var assembly = AppDomain.CurrentDomain.Load("Sample.Application");
+            //services.AddMediatR(assembly);
+
             services.AddControllers();
 
             //Swagger
@@ -44,10 +57,7 @@ namespace Sample.WebApi
 
             //DI
             //services.AddTransient();
-
-            //Load All Handler
-            //services.AddMediatR(typeof(GetUserHandler).Assembly);
-            //services.AddMediatR(AppDomain.CurrentDomain.Load("Sample.Application"));
+            services.AddTransient<IxxxProvider,xxxProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

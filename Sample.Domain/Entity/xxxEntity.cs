@@ -6,5 +6,8 @@ namespace Sample.Domain.Entity
         public xxxEntity()
         {
         }
+
+        public string name { get; set; }
+        public int age { get; set; }
     }
 }
