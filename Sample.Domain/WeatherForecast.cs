@@ -1,6 +1,6 @@
 using System;
 
-namespace Sample.WebApi
+namespace Sample.Domain
 {
     public class WeatherForecast
     {
