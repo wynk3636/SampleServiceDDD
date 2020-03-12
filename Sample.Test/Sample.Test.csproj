@@ -16,5 +16,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sample.WebApi\Sample.WebApi.csproj" />
+    <ProjectReference Include="..\Sample.Application\Sample.Application.csproj" />
+    <ProjectReference Include="..\Sample.Common\Sample.Common.csproj" />
+    <ProjectReference Include="..\Sample.Domain\Sample.Domain.csproj" />
+    <ProjectReference Include="..\Sample.Infrastructure\Sample.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\" />
   </ItemGroup>
 </Project>
