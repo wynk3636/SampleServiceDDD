@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Provider\" />
+    <Folder Include="Provider\SQLServer\" />
+    <Folder Include="Provider\OtherService\" />
+  </ItemGroup>
 </Project>
