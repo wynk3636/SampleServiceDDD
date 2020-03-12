@@ -15,16 +15,16 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Sample.Application\Sample.Application.csproj">
+    <ProjectReference Include="..\Sample.Application\Sample.Application.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="Sample.Common\Sample.Common.csproj">
+    <ProjectReference Include="..\Sample.Common\Sample.Common.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="Sample.Domain\Sample.Domain.csproj">
+    <ProjectReference Include="..\Sample.Domain\Sample.Domain.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="Sample.Infrastructure\Sample.Infrastructure.csproj">
+    <ProjectReference Include="..\Sample.Infrastructure\Sample.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
